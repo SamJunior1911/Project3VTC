@@ -1,0 +1,35 @@
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
+
+export default [
+  index("pages/home.tsx"),
+  route("/product/:id", "pages/ProductDetail.tsx"),
+  route("/cart", "pages/cart.tsx"),
+  route("/login", "pages/Login.tsx"),
+  route("/register", "pages/Register.tsx"),
+  route("/auth/success", "pages/AuthSuccess.tsx"),
+  route("/auth/error", "pages/Error.tsx"),
+  route("/dashboard", "dashboard-pages/dashboard/page.tsx"),
+  route("/dashboard/orders", "dashboard-pages/orders/page.tsx"),
+  route("/dashboard/products", "dashboard-pages/products/page.tsx"),
+  route("/dashboard/categories", "dashboard-pages/categories/page.tsx"),
+  route("/dashboard/users", "dashboard-pages/users/page.tsx"),
+  route("/dashboard/discounts", "dashboard-pages/discounts/page.tsx"),
+  route("/forgot-password", "pages/ForgotPassword.tsx"),
+  route("/verify-email", "pages/VerifyEmailPage.tsx"),
+  route("/categories", "pages/category/Category.tsx"),
+  route("/search", "pages/search/Search.tsx"),
+  route("/checkout", "pages/orders/CheckoutPage.jsx"),
+  route("/admin/login", "pages/admin/AdminLogin.tsx"),
+  route("/order-summary", "pages/orders/OrderConfirm.jsx"),
+  route("/admin/forgot-password", "pages/admin/AdminForgot.tsx"),
+  route("/admin/reset-password", "pages/admin/AdminReset.tsx"),
+
+  route("/profile", "pages/UserProfile.tsx", [
+    index("components/profile/ProfileData.jsx"),
+    route("email", "components/profile/ChangeEmail.jsx"),
+    route("phone", "components/profile/ChangePhone.jsx"),
+    route("address", "components/profile/Address.jsx"),
+    route("password", "components/profile/ChangePassword.jsx"),
+    route("purchase", "components/profile/Purchase.jsx"),
+  ]),
+] satisfies RouteConfig;

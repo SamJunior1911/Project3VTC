@@ -23,7 +23,8 @@ export default [
   route("/order-summary", "pages/orders/OrderConfirm.jsx"),
   route("/admin/forgot-password", "pages/admin/AdminForgot.tsx"),
   route("/admin/reset-password", "pages/admin/AdminReset.tsx"),
-
+  route("/bestsellers", "pages/BestsellersPage.tsx"),
+  route("/new-arrivals", "pages/NewArrivalsPage.tsx"),
   route("/profile", "pages/UserProfile.tsx", [
     index("components/profile/ProfileData.jsx"),
     route("email", "components/profile/ChangeEmail.jsx"),
